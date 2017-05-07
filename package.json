@@ -8,6 +8,7 @@
   },
   "scripts": {
     "test": "mocha spec/ --require babel-register",
+    "eslint":"eslint --cache --fix ./",
     "start": "node index.js"
   },
   "nyc": {
