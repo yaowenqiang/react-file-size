@@ -7,9 +7,11 @@
         "react-file-size": "./index.js"
     },
     "scripts": {
-        "test": "npm-run-all lint:* mocha",
+        "test": "npm-run-all lint && mocha",
         "lint:js": "eslint --cache --fix ./",
         "lint:css": "stylelint '**/*.scss' --syntax scss",
+        "lint:css:fix": "stylefmt -R src/",
+        "lint": "npm-run-all lint:**",
         "start": "node index.js",
         "mocha": "mocha spec/ --require babel-register --watch"
     },
@@ -77,6 +79,7 @@
         "push-dir": "^0.2.2",
         "sinon": "^1.17.6",
         "sinon-chai": "^2.8.0",
+        "stylefmt": "^5.3.2",
         "stylelint": "^7.10.1",
         "uglify-js": "^2.6.2"
     }
