@@ -7,11 +7,11 @@
         "react-file-size": "./index.js"
     },
     "scripts": {
-        "test": "npm-run-all eslint stylelint mocha",
+        "test": "npm-run-all --parallel eslint mocha stylelint",
         "eslint": "eslint --cache --fix ./",
         "stylelint": "stylelint '**/*.scss' --syntax scss",
         "start": "node index.js",
-        "mocha": "mocha spec/ --require babel-register"
+        "mocha": "mocha spec/ --require babel-register --watch"
     },
     "nyc": {
         "include": [
