@@ -1,0 +1,6 @@
+{
+  "devDependencies": {
+    "mustache": "^2.3.0",
+    "uglify-js": "^2.8.23"
+  }
+}
