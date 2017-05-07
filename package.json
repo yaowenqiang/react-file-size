@@ -7,9 +7,9 @@
         "react-file-size": "./index.js"
     },
     "scripts": {
-        "test": "npm-run-all --parallel eslint mocha stylelint",
-        "eslint": "eslint --cache --fix ./",
-        "stylelint": "stylelint '**/*.scss' --syntax scss",
+        "test": "npm-run-all lint:* mocha",
+        "lint:js": "eslint --cache --fix ./",
+        "lint:css": "stylelint '**/*.scss' --syntax scss",
         "start": "node index.js",
         "mocha": "mocha spec/ --require babel-register --watch"
     },
