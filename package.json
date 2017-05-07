@@ -22,10 +22,10 @@
         "start": "node index.js",
         "mocha": "mocha spec/ --require babel-register --watch",
         "build": "npm-run-all build:*",
-        "prebuild": "rm -rf public/",
-        "build:html": "pug --obj data.json src/index.pug --output public/",
-        "build:css": "node-sass src/index.scss | postcss -c .postcssrc.json | cssmin > public/index.min.css",
-        "build:js": "mustache src/index.mustache.js  data.json | uglify > public/index.min.js"
+        "prebuild": "rm -rf public/$npm_package_version",
+        "build:html": "pug --obj data.json src/index.pug --output public/$npm_package_version/",
+        "build:css": "node-sass src/index.scss | postcss -c .postcssrc.json | cssmin > public/$npm_package_version/index.min.css",
+        "build:js": "mustache src/index.mustache.js  data.json | uglify > public/$npm_package_version/index.min.js"
     },
     "nyc": {
         "include": [
