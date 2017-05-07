@@ -19,6 +19,8 @@
         "lint": "npm-run-all lint:**",
         "start": "node index.js",
         "mocha": "mocha spec/ --require babel-register --watch",
+        "build": "npm-run-all build:*",
+        "prebuild": "rm -rf public/",
         "build:html": "pug --obj data.json src/index.pug --output public/",
         "build:css": "node-sass src/index.scss | postcss -c .postcssrc.json | cssmin > public/index.min.css",
         "build:js": "mustache src/index.mustache.js  data.json | uglify > public/index.min.js"
