@@ -7,8 +7,9 @@
     "react-file-size": "./index.js"
   },
   "scripts": {
-    "test": "mocha spec/ --require babel-register",
-    "eslint":"eslint --cache --fix ./",
+    "test": "npm run eslint && npm run stylelint && mocha spec/ --require babel-register",
+    "eslint": "eslint --cache --fix ./",
+    "stylelint": "stylelint '**/*.scss' --syntax scss",
     "start": "node index.js"
   },
   "nyc": {
@@ -74,6 +75,7 @@
     "push-dir": "^0.2.2",
     "sinon": "^1.17.6",
     "sinon-chai": "^2.8.0",
+    "stylelint": "^7.10.1",
     "uglify-js": "^2.6.2"
   }
 }
